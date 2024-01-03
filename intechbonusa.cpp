@@ -20,13 +20,13 @@ string compress_string(const string& str) {
     // Handle the last character
     compressed += prev + to_string(count);
 
-    return compressed.length() < str.length() ? compressed : str; // Return shorter version
+    return compressed.length() < str.length() ? compressed : str; 
 }
 
 string second_compressor(const string& compressed) {
     string further_compressed;
     int count = 1;
-    string prev_group = compressed.substr(0, 2); // Handle character and count as a group
+    string prev_group = compressed.substr(0, 2); 
 
     for (int i = 2; i < compressed.length(); i += 2) {
         string group = compressed.substr(i, 2);
@@ -44,7 +44,7 @@ string second_compressor(const string& compressed) {
         }
     }
 
-    // Handle the last group (and add it even if its count is 1)
+  
     if (count > 1) {
         further_compressed += prev_group.substr(0, 1) + to_string(count);
     } else {
