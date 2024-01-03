@@ -1,0 +1,26 @@
+#include <iostream>
+#include <string>
+
+string removeDigit(const string& number) {
+    string largest = number;
+
+    for (int i = 0; i < number.length(); ++i) {
+        string current = number.substr(0, i) + number.substr(i + 1);
+        if (current > largest) {
+            largest = current;
+        }
+    }
+
+    return largest;
+}
+
+int main() {
+    string numbers[] = {"1234", "2945", "9273", "3954", "19374"};
+
+    for (const std::string& number : numbers) {
+       string largest_number = removeDigit(number);
+        cout << largest_number <<endl;
+    }
+
+    return 0;
+}
