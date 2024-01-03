@@ -1,0 +1,5 @@
+Explain one real world use case where stack is better used data structure than arrays.
+
+
+An undo Button / Browsers Back button is a perfect application of Stack 
+As Stack has last in First out principle we can undo or go to a page recently visited / added in just one movie  . But where as in array we need to go till the last but one element. It takes multiple steps.
