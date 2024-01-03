@@ -24,3 +24,5 @@ int main() {
 
     return 0;
 }
+/* Brute force: would try every possible combination of removing digits from the number and then compare the resulting numbers to find the largest. This would be very inefficient, especially for large numbers.
+Greedy algorithm: This code iterates through each digit in the number and removes it temporarily. It then compares the remaining string to the current "largest" found and updates the "largest" if necessary. This approach makes locally optimal choices at each step (removing the digit that results in the highest immediate number) */
